@@ -1,0 +1,44 @@
+.feed {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.feed > * {
+  flex: 1;
+  min-width: 280px;
+  max-width: 33.33%;
+}
+
+@media (max-width: 960px) {
+  .feed > * {
+    flex: 1;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .feed > * {
+    flex: 1;
+    max-width: 100%;
+  }
+}
+
+.statusWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  color: var(--text-secondary);
+}
+
+.statusText {
+  margin: 0;
+  font-size: 16px;
+}
+
+.errorText {
+  margin: 0;
+  font-size: 16px;
+  color: #e05555;
+}

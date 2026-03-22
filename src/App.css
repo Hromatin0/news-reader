@@ -1,0 +1,147 @@
+:root,
+[data-theme="dark"] {
+  --bg: #0f0f11;
+  --card-bg: #18181c;
+  --border: #2a2a30;
+  --accent: #e8c56d;
+  --text-primary: #f0ede8;
+  --text-secondary: #9e9b94;
+  --text-muted: #5a5855;
+  --shadow: rgba(0, 0, 0, 0.4);
+  --header-bg: #0f0f11;
+}
+
+[data-theme="light"] {
+  --bg: #f5f4f0;
+  --card-bg: #ffffff;
+  --border: #dddbd4;
+  --accent: #b8860b;
+  --text-primary: #1a1917;
+  --text-secondary: #5a5855;
+  --text-muted: #9e9b94;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --header-bg: #f5f4f0;
+}
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  min-height: 100vh;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+.header {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid var(--border);
+  padding: 30px 20px;
+}
+
+.logo {
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.nav {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 4px;
+  margin-left: auto;
+}
+
+.navBtn {
+  padding: 6px 16px;
+  border: none;
+  border-radius: 20px;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.navBtn:hover {
+  color: var(--accent);
+  background: rgba(232, 197, 109, 0.08);
+}
+
+.navBtnActive {
+  background: var(--accent);
+  color: #0f0f11;
+}
+
+.navBtnActive:hover {
+  background: var(--accent);
+  color: #0f0f11;
+}
+
+.themeBtn {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 17px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.themeBtn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.main {
+  margin-top: 36px;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-wrap: wrap;
+    padding: 16px 20px;
+    gap: 12px;
+  }
+
+  .logo {
+    flex: 1;
+  }
+
+  .nav {
+    order: 3;
+    margin-left: 0;
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+}
